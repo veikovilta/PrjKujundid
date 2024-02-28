@@ -1,4 +1,4 @@
-﻿Public Class Kujund
+﻿Public MustInherit Class Kujund
 
     Private tyyp As String
     Protected kylgA As Double
