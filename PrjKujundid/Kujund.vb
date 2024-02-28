@@ -9,8 +9,8 @@
                    ByVal kylgB As Double, ByVal kylgC As Double)
         Me.tyyp = tyyp
         Me.kylgA = kylgA
-        Me.kylgA = kylgB
-        Me.kylgA = kylgC
+        Me.kylgB = kylgB
+        Me.kylgC = kylgC
     End Sub
 
     Public Function annaTyyp() As String
