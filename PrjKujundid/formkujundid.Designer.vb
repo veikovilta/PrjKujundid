@@ -38,19 +38,27 @@ Partial Class formkujundid
         Me.lblUmbermoot = New System.Windows.Forms.Label()
         Me.lblPindala = New System.Windows.Forms.Label()
         Me.lblTulemused = New System.Windows.Forms.Label()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.txtKorgus = New System.Windows.Forms.TextBox()
+        Me.lblkorgus = New System.Windows.Forms.Label()
+        Me.btnRomb = New System.Windows.Forms.Button()
+        Me.btnRoopkulik = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.grpbKujundid.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.lblkorgus)
+        Me.GroupBox1.Controls.Add(Me.txtKorgus)
         Me.GroupBox1.Controls.Add(Me.lblKylgB)
         Me.GroupBox1.Controls.Add(Me.lblKylgA)
         Me.GroupBox1.Controls.Add(Me.txtKylgB)
         Me.GroupBox1.Controls.Add(Me.txtKylgA)
         Me.GroupBox1.Location = New System.Drawing.Point(50, 70)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(259, 132)
+        Me.GroupBox1.Size = New System.Drawing.Size(267, 189)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Algandmed"
@@ -89,19 +97,21 @@ Partial Class formkujundid
         '
         'grpbKujundid
         '
+        Me.grpbKujundid.Controls.Add(Me.btnRoopkulik)
+        Me.grpbKujundid.Controls.Add(Me.btnRomb)
         Me.grpbKujundid.Controls.Add(Me.btnRistkylik)
         Me.grpbKujundid.Controls.Add(Me.btnRuut)
         Me.grpbKujundid.Controls.Add(Me.btnKolmnurk)
         Me.grpbKujundid.Location = New System.Drawing.Point(534, 70)
         Me.grpbKujundid.Name = "grpbKujundid"
-        Me.grpbKujundid.Size = New System.Drawing.Size(306, 239)
+        Me.grpbKujundid.Size = New System.Drawing.Size(296, 280)
         Me.grpbKujundid.TabIndex = 1
         Me.grpbKujundid.TabStop = False
         Me.grpbKujundid.Text = "Kujundid"
         '
         'btnRistkylik
         '
-        Me.btnRistkylik.Location = New System.Drawing.Point(105, 155)
+        Me.btnRistkylik.Location = New System.Drawing.Point(110, 121)
         Me.btnRistkylik.Name = "btnRistkylik"
         Me.btnRistkylik.Size = New System.Drawing.Size(120, 34)
         Me.btnRistkylik.TabIndex = 2
@@ -110,7 +120,7 @@ Partial Class formkujundid
         '
         'btnRuut
         '
-        Me.btnRuut.Location = New System.Drawing.Point(105, 98)
+        Me.btnRuut.Location = New System.Drawing.Point(110, 81)
         Me.btnRuut.Name = "btnRuut"
         Me.btnRuut.Size = New System.Drawing.Size(120, 34)
         Me.btnRuut.TabIndex = 1
@@ -119,7 +129,7 @@ Partial Class formkujundid
         '
         'btnKolmnurk
         '
-        Me.btnKolmnurk.Location = New System.Drawing.Point(105, 47)
+        Me.btnKolmnurk.Location = New System.Drawing.Point(110, 41)
         Me.btnKolmnurk.Name = "btnKolmnurk"
         Me.btnKolmnurk.Size = New System.Drawing.Size(120, 34)
         Me.btnKolmnurk.TabIndex = 0
@@ -181,17 +191,73 @@ Partial Class formkujundid
         'lblTulemused
         '
         Me.lblTulemused.AutoSize = True
-        Me.lblTulemused.Location = New System.Drawing.Point(121, 375)
+        Me.lblTulemused.Location = New System.Drawing.Point(117, 375)
         Me.lblTulemused.Name = "lblTulemused"
         Me.lblTulemused.Size = New System.Drawing.Size(91, 20)
         Me.lblTulemused.TabIndex = 10
         Me.lblTulemused.Text = "Tulemused:"
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"0", "1", "2", "3"})
+        Me.ComboBox1.Location = New System.Drawing.Point(231, 306)
+        Me.ComboBox1.MaxLength = 4
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(121, 28)
+        Me.ComboBox1.TabIndex = 11
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(117, 306)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(61, 20)
+        Me.Label1.TabIndex = 12
+        Me.Label1.Text = "Täpsus"
+        '
+        'txtKorgus
+        '
+        Me.txtKorgus.Location = New System.Drawing.Point(100, 144)
+        Me.txtKorgus.Name = "txtKorgus"
+        Me.txtKorgus.Size = New System.Drawing.Size(135, 26)
+        Me.txtKorgus.TabIndex = 4
+        '
+        'lblkorgus
+        '
+        Me.lblkorgus.AutoSize = True
+        Me.lblkorgus.Location = New System.Drawing.Point(24, 147)
+        Me.lblkorgus.Name = "lblkorgus"
+        Me.lblkorgus.Size = New System.Drawing.Size(76, 20)
+        Me.lblkorgus.TabIndex = 5
+        Me.lblkorgus.Text = "Kõrgus = "
+        '
+        'btnRomb
+        '
+        Me.btnRomb.Location = New System.Drawing.Point(110, 161)
+        Me.btnRomb.Name = "btnRomb"
+        Me.btnRomb.Size = New System.Drawing.Size(120, 34)
+        Me.btnRomb.TabIndex = 3
+        Me.btnRomb.Text = "Romb "
+        Me.btnRomb.UseVisualStyleBackColor = True
+        '
+        'btnRoopkulik
+        '
+        Me.btnRoopkulik.Location = New System.Drawing.Point(110, 201)
+        Me.btnRoopkulik.Name = "btnRoopkulik"
+        Me.btnRoopkulik.Size = New System.Drawing.Size(120, 33)
+        Me.btnRoopkulik.TabIndex = 4
+        Me.btnRoopkulik.Text = "Rööpkülik"
+        Me.btnRoopkulik.UseVisualStyleBackColor = True
         '
         'formkujundid
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1033, 708)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.lblTulemused)
         Me.Controls.Add(Me.lblPindala)
         Me.Controls.Add(Me.lblUmbermoot)
@@ -227,4 +293,10 @@ Partial Class formkujundid
     Friend WithEvents lblUmbermoot As Label
     Friend WithEvents lblPindala As Label
     Friend WithEvents lblTulemused As Label
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents lblkorgus As Label
+    Friend WithEvents txtKorgus As TextBox
+    Friend WithEvents btnRoopkulik As Button
+    Friend WithEvents btnRomb As Button
 End Class
