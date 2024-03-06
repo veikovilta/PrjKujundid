@@ -42,7 +42,7 @@ Partial Class formkujundid
         Me.lblUmbermoot = New System.Windows.Forms.Label()
         Me.lblPindala = New System.Windows.Forms.Label()
         Me.lblTulemused = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.cmb1 = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.grpbKujundid.SuspendLayout()
@@ -232,16 +232,16 @@ Partial Class formkujundid
         Me.lblTulemused.TabIndex = 10
         Me.lblTulemused.Text = "Tulemused:"
         '
-        'ComboBox1
+        'cmb1
         '
-        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"0", "1", "2", "3"})
-        Me.ComboBox1.Location = New System.Drawing.Point(231, 306)
-        Me.ComboBox1.MaxLength = 4
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 28)
-        Me.ComboBox1.TabIndex = 11
+        Me.cmb1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmb1.FormattingEnabled = True
+        Me.cmb1.Items.AddRange(New Object() {"0", "1", "2", "3"})
+        Me.cmb1.Location = New System.Drawing.Point(231, 306)
+        Me.cmb1.MaxLength = 4
+        Me.cmb1.Name = "cmb1"
+        Me.cmb1.Size = New System.Drawing.Size(121, 28)
+        Me.cmb1.TabIndex = 11
         '
         'Label1
         '
@@ -258,7 +258,7 @@ Partial Class formkujundid
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1033, 708)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.cmb1)
         Me.Controls.Add(Me.lblTulemused)
         Me.Controls.Add(Me.lblPindala)
         Me.Controls.Add(Me.lblUmbermoot)
@@ -294,7 +294,7 @@ Partial Class formkujundid
     Friend WithEvents lblUmbermoot As Label
     Friend WithEvents lblPindala As Label
     Friend WithEvents lblTulemused As Label
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents cmb1 As ComboBox
     Friend WithEvents Label1 As Label
     Friend WithEvents lblkorgus As Label
     Friend WithEvents txtKorgus As TextBox

@@ -4,6 +4,7 @@ Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 Public Class formkujundid
 
     Private precision As Integer = 0
+    Private flag As Integer = 0
     Private Sub tootleKuljund(ByRef kujund As Kujund)
 
         lblTyyp.Text = kujund.annaTyyp
@@ -36,8 +37,8 @@ Public Class formkujundid
 
     End Sub
 
-    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
-        precision = ComboBox1.SelectedItem
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmb1.SelectedIndexChanged
+        precision = cmb1.SelectedItem
     End Sub
 
     Private Sub btnRomb_Click(sender As Object, e As EventArgs) Handles btnRomb.Click
@@ -63,50 +64,60 @@ Public Class formkujundid
         btnRomb.Enabled = False
         btnRoopkulik.Enabled = False
 
-        'ruut
-        If Not kylgA And kylgB And korgus Then
+        If Not (txtKylgA.Text = "0" Or txtKylgA.Text = "0" Or txtKorgus.Text = "0") Then
+            'ruut
+            If Not kylgA And kylgB And korgus Then
 
-            If Double.Parse(txtKylgA.Text) Then
                 btnRuut.Enabled = True
-            End If
 
-            'kolmnurk ristkulik
-        ElseIf Not kylgA And Not kylgB And korgus Then
+                If IsNumeric(txtKylgA.Text) Then
+                    btnRomb.Enabled = True
+                Else
+                    MessageBox.Show("is not numeric")
+                End If
 
-            If Double.Parse(txtKylgA.Text) And Double.Parse(txtKylgB.Text) Then
-                btnKolmnurk.Enabled = True
-                btnRistkylik.Enabled = True
-            End If
+                'kolmnurk ristkulik
+            ElseIf Not kylgA And Not kylgB And korgus Then
 
-            'kas kolmnurk eksiteerib
-            If Double.Parse(txtKylgA.Text) > (2 * Double.Parse(txtKylgB.Text)) Then
-                btnKolmnurk.Enabled = False
-            End If
-            'roopkulik
-        ElseIf Not kylgA And Not kylgB And Not korgus Then
+                'kas kolmnurk eksiteeri
 
-            If Double.Parse(txtKylgA.Text) And Double.Parse(txtKylgB.Text) And Double.Parse(txtKorgus.Text) Then
-                btnRoopkulik.Enabled = True
-            End If
+                If IsNumeric(txtKylgA.Text) And IsNumeric(txtKylgB.Text) Then
+                    btnKolmnurk.Enabled = True
+                    btnRistkylik.Enabled = True
 
-            'romb
-        ElseIf Not kylgA And kylgB And Not korgus Then
+                    If Double.Parse(txtKylgA.Text) > (2 * Double.Parse(txtKylgB.Text)) Then
+                        btnKolmnurk.Enabled = False
+                    End If
 
-            If Double.Parse(txtKylgA.Text) And Double.Parse(txtKorgus.Text) Then
-                btnRomb.Enabled = True
+                Else
+                    MessageBox.Show("is not numeric")
+                End If
+
+                'roopkulik
+            ElseIf Not kylgA And Not kylgB And Not korgus Then
+
+                If IsNumeric(txtKylgA.Text) And IsNumeric(txtKylgB.Text) And IsNumeric(txtKorgus.Text) Then
+                    btnRoopkulik.Enabled = True
+                Else
+                    MessageBox.Show("is not numeric")
+                End If
+
+                'romb
+            ElseIf Not kylgA And kylgB And Not korgus Then
+
+                If IsNumeric(txtKylgA.Text) And IsNumeric(txtKorgus.Text) Then
+                    btnRomb.Enabled = True
+                Else
+                    MessageBox.Show("is not numeric")
+                End If
+
             End If
 
         End If
-    End Sub
 
-    Private Sub txtKylgB_KeyPress_1(sender As Object, e As KeyPressEventArgs) Handles txtKylgB.KeyPress, txtKylgA.KeyPress, txtKorgus.KeyPress, MyBase.KeyPress
-        If (Not Char.IsDigit(e.KeyChar)) And (e.KeyChar <> ControlChars.Back) Then
-            ' If not a digit or backspace, suppress the key press
-            e.Handled = True
-        End If
     End Sub
 
     Private Sub formkujundid_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ComboBox1.SelectedIndex = 0
+        cmb1.SelectedIndex = 0
     End Sub
 End Class
