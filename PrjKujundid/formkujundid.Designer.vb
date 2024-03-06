@@ -23,11 +23,15 @@ Partial Class formkujundid
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.lblkorgus = New System.Windows.Forms.Label()
+        Me.txtKorgus = New System.Windows.Forms.TextBox()
         Me.lblKylgB = New System.Windows.Forms.Label()
         Me.lblKylgA = New System.Windows.Forms.Label()
         Me.txtKylgB = New System.Windows.Forms.TextBox()
         Me.txtKylgA = New System.Windows.Forms.TextBox()
         Me.grpbKujundid = New System.Windows.Forms.GroupBox()
+        Me.btnRoopkulik = New System.Windows.Forms.Button()
+        Me.btnRomb = New System.Windows.Forms.Button()
         Me.btnRistkylik = New System.Windows.Forms.Button()
         Me.btnRuut = New System.Windows.Forms.Button()
         Me.btnKolmnurk = New System.Windows.Forms.Button()
@@ -40,10 +44,6 @@ Partial Class formkujundid
         Me.lblTulemused = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.txtKorgus = New System.Windows.Forms.TextBox()
-        Me.lblkorgus = New System.Windows.Forms.Label()
-        Me.btnRomb = New System.Windows.Forms.Button()
-        Me.btnRoopkulik = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.grpbKujundid.SuspendLayout()
         Me.SuspendLayout()
@@ -62,6 +62,22 @@ Partial Class formkujundid
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Algandmed"
+        '
+        'lblkorgus
+        '
+        Me.lblkorgus.AutoSize = True
+        Me.lblkorgus.Location = New System.Drawing.Point(24, 147)
+        Me.lblkorgus.Name = "lblkorgus"
+        Me.lblkorgus.Size = New System.Drawing.Size(76, 20)
+        Me.lblkorgus.TabIndex = 5
+        Me.lblkorgus.Text = "Kõrgus = "
+        '
+        'txtKorgus
+        '
+        Me.txtKorgus.Location = New System.Drawing.Point(100, 144)
+        Me.txtKorgus.Name = "txtKorgus"
+        Me.txtKorgus.Size = New System.Drawing.Size(135, 26)
+        Me.txtKorgus.TabIndex = 4
         '
         'lblKylgB
         '
@@ -109,6 +125,24 @@ Partial Class formkujundid
         Me.grpbKujundid.TabStop = False
         Me.grpbKujundid.Text = "Kujundid"
         '
+        'btnRoopkulik
+        '
+        Me.btnRoopkulik.Location = New System.Drawing.Point(110, 201)
+        Me.btnRoopkulik.Name = "btnRoopkulik"
+        Me.btnRoopkulik.Size = New System.Drawing.Size(120, 33)
+        Me.btnRoopkulik.TabIndex = 4
+        Me.btnRoopkulik.Text = "Rööpkülik"
+        Me.btnRoopkulik.UseVisualStyleBackColor = True
+        '
+        'btnRomb
+        '
+        Me.btnRomb.Location = New System.Drawing.Point(110, 161)
+        Me.btnRomb.Name = "btnRomb"
+        Me.btnRomb.Size = New System.Drawing.Size(120, 34)
+        Me.btnRomb.TabIndex = 3
+        Me.btnRomb.Text = "Romb "
+        Me.btnRomb.UseVisualStyleBackColor = True
+        '
         'btnRistkylik
         '
         Me.btnRistkylik.Location = New System.Drawing.Point(110, 121)
@@ -129,6 +163,7 @@ Partial Class formkujundid
         '
         'btnKolmnurk
         '
+        Me.btnKolmnurk.Enabled = False
         Me.btnKolmnurk.Location = New System.Drawing.Point(110, 41)
         Me.btnKolmnurk.Name = "btnKolmnurk"
         Me.btnKolmnurk.Size = New System.Drawing.Size(120, 34)
@@ -216,40 +251,6 @@ Partial Class formkujundid
         Me.Label1.Size = New System.Drawing.Size(61, 20)
         Me.Label1.TabIndex = 12
         Me.Label1.Text = "Täpsus"
-        '
-        'txtKorgus
-        '
-        Me.txtKorgus.Location = New System.Drawing.Point(100, 144)
-        Me.txtKorgus.Name = "txtKorgus"
-        Me.txtKorgus.Size = New System.Drawing.Size(135, 26)
-        Me.txtKorgus.TabIndex = 4
-        '
-        'lblkorgus
-        '
-        Me.lblkorgus.AutoSize = True
-        Me.lblkorgus.Location = New System.Drawing.Point(24, 147)
-        Me.lblkorgus.Name = "lblkorgus"
-        Me.lblkorgus.Size = New System.Drawing.Size(76, 20)
-        Me.lblkorgus.TabIndex = 5
-        Me.lblkorgus.Text = "Kõrgus = "
-        '
-        'btnRomb
-        '
-        Me.btnRomb.Location = New System.Drawing.Point(110, 161)
-        Me.btnRomb.Name = "btnRomb"
-        Me.btnRomb.Size = New System.Drawing.Size(120, 34)
-        Me.btnRomb.TabIndex = 3
-        Me.btnRomb.Text = "Romb "
-        Me.btnRomb.UseVisualStyleBackColor = True
-        '
-        'btnRoopkulik
-        '
-        Me.btnRoopkulik.Location = New System.Drawing.Point(110, 201)
-        Me.btnRoopkulik.Name = "btnRoopkulik"
-        Me.btnRoopkulik.Size = New System.Drawing.Size(120, 33)
-        Me.btnRoopkulik.TabIndex = 4
-        Me.btnRoopkulik.Text = "Rööpkülik"
-        Me.btnRoopkulik.UseVisualStyleBackColor = True
         '
         'formkujundid
         '
